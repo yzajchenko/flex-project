@@ -20,7 +20,8 @@ a {
 
 header {
     background: url(../images/header-background.jpg) no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center top;
 }
 
 header:before {
@@ -145,15 +146,12 @@ section.services .service {
 }
 
 section.services .service .service-item {
-    display: flex;
-}
-
-section.services .service .service-item .img {
-    margin-right: 17px;
+    background: url(../images/service_item.png) no-repeat, url(../images/service-item-ecllipse.png) no-repeat, url(../images/service-item-ecllipse1.png) no-repeat;
+    background-position: 32px 32px, 10px 10px, 0 0;
 }
 
 section.services .service .service-item .container {
-    margin-top: 50px;
+    padding-left: 150px;
 }
 
 
@@ -269,15 +267,18 @@ section.about-us .project .name {
     color: #999999;
 }
 
-section.all-services {
-    background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
-}
-
 section.all-services .wrapper {
     width: 1110px;
     margin: 0 auto;
-    padding: 100px 0 302px;
-    position: relative;
+    margin-top: -390px;
+}
+
+section.all-services:before {
+    content: "";
+    display: block;
+    background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
+    width: 100%;
+    height: 490px;
 }
 
 section.all-services .wrapper .container {
@@ -311,10 +312,9 @@ section.all-services .wrapper button {
 }
 
 section.all-services .works {
-    position: absolute;
-    top: 258px;
     display: flex;
     padding-bottom: 85px;
+    padding-top: 70px;
     border-bottom: 1px solid #E0E0E0;
 }
 
@@ -357,7 +357,7 @@ section.all-services .item .details a {
 
 section.all-project {
     background: #F6F6F8;
-    margin-top: 482px;
+    margin-top: 85px;
     padding: 100px 0 130px;
 }
 
@@ -408,22 +408,25 @@ section.all-project .wrapper button {
     color: #FFFFFF;
 }   
 
-section.video {
+section.video:before {
+    content: "";
+    display: block;
     background: url(../images/video-background.jpg) no-repeat;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-size: 100% 100%;
     height: 570px;
+    background-size: cover;
+    background-position: center top;
+}
+
+
+.video {
+    background-color: #E5E5E5;
 }
 
 section.video .wrapper {
     width: 1110px;
-    position: absolute;
-    top: 70px;
     padding-bottom: 85px;
     border-bottom: 1px solid #E0E0E0;
+    margin: -500px auto 0;
 }
 
 section.video h2 {
@@ -472,7 +475,7 @@ section.video .video-content button p {
 
 section.subcribe {
     background: #E5E5E5;
-    padding: 250px 0 85px 0; 
+    padding: 85px 0 85px 0; 
 }
 
 section.subcribe .wrapper {
